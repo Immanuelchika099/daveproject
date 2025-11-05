@@ -91,7 +91,7 @@
   /* Projects grid: single column */
   .pject-grid {
     grid-template-columns: 1fr;
-    padding: 4rem 2rem;
+    padding: 1rem 2rem;
     gap: 2rem;
   }
   .pject-card { width: 100%; }
@@ -102,7 +102,7 @@
 
   /* About area: stack image then text */
   .about-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
-  .about-img { width: 100%; max-width: 46rem; border-radius: 2rem; }
+  .about-img { width: 100%; max-width: 40rem; border-radius: 2rem; }
 
   /* Footer: column layout */
   .footer { width: 95%; padding: 6rem 2rem; border-top-left-radius: 3rem; border-top-right-radius: 3rem; }
@@ -118,6 +118,9 @@
   .pject-grid { grid-template-columns: repeat(2, 1fr); padding: 6rem; gap: 2rem; }
   .cta-card-main { grid-template-columns: repeat(2, 1fr); column-gap: 1.5rem; width: 95%; }
   .cta-card { height: auto; padding: 4rem 2.4rem; }
+  .card-img{
+    height: 20rem;
+  }
   .main-body{
     min-height: 100vh;
     height: auto;
@@ -189,6 +192,9 @@
   .contact-icon { width: 4rem; height: 4rem; }
   .scroll-up-icon { right: 1.6rem; bottom: 2.6rem; }
 
+  #project-section.project-section{
+    height: 110vh;
+  }
   .experience-main{display: none;}
   .hero-ex{ flex-direction: column; align-items: center; }
   .heading-intro{ text-align: center;}
