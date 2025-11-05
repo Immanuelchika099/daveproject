@@ -642,7 +642,7 @@ h1.heading{
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    background-image: conic-gradient(from var(--angle), transparent 10%,  #000000, #0041c4);
+    background-image: conic-gradient(from var(--angle), transparent 0%,  #2d2c2d, #0041c4);
     border-radius: 5rem;
     padding: 3px;
     z-index: -1;
