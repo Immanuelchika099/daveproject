@@ -93,10 +93,8 @@
 /* --------------- Medium phones / large tablets  (<= 991px) --------------- */
 @media (max-width: 991px) {
     #particles-js{
-        background-position: center;
-        background-size: cover;
-        background-repeat: repeat;
-        opacity: 11;
+        background-size: 150px 150px;
+        animation: 45s linear infinite;
     }
 
   .heading-container { height: 60vh; width: 93%; padding: 3rem; border-radius: 4rem;}
