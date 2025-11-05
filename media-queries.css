@@ -49,7 +49,7 @@
     padding: .8rem 1.6rem;
   }
 
-  .nav-logo { width: 3rem; }
+  .nav-logo { width: 2rem; }
 
   /* adjust hero container width/padding */
   .heading-container {
@@ -156,7 +156,8 @@
   .project-section{
     display: flex;
     flex-direction: column;
-    min-height: 240vh;
+    min-height: 230vh;
+    height: auto;
     justify-content: center;
 
   }
@@ -165,17 +166,12 @@
   .about-heading-text{ font-size: 3.8rem; text-align: center;}
   .project-detail{ display: none; }
   #scrollContainer.cta-card-main{ grid-template-columns: 1fr; gap: 3rem; }
-  .feature-section{
-    margin-top: 0;
-    gap: 4rem;
-    display: flex;
-    flex-direction: column; justify-content: center;
-  }
-  .about-info{
+  .feature-section{ margin-top: 0; gap: 4rem; display: flex; flex-direction: column; justify-content: center; }
+  .about-info{ text-align: center; }
+  .about-img{ width: 35rem; }
+  .copyrights{
+    padding-top: 3rem;
     text-align: center;
-  }
-  .about-img{
-    width: 35rem;
   }
 }
 
@@ -193,36 +189,14 @@
   .contact-icon { width: 4rem; height: 4rem; }
   .scroll-up-icon { right: 1.6rem; bottom: 2.6rem; }
 
-  .experience-main{
-    display: none;
-  }
-  .hero-ex{
-    flex-direction: column;
-    align-items: center;
-  }
-  .heading-intro{
-    text-align: center;
-  }
-  .heading{
-    font-size: 8rem;
-    text-align: center;
-  }
-  .heading-text{
-    text-align: center;
-    font-size: 1.8rem;
-  }
-  .heading-text.sm{
-    font-size: 1.6rem;
-    padding-bottom: 5rem;
-  }
-  .heading-detail-flex{
-    justify-content: center;
-    gap: 1rem;
-  }
-  .heading-detail.hire{
-    width: 151px;
-    text-align: center;
-  }
+  .experience-main{display: none;}
+  .hero-ex{ flex-direction: column; align-items: center; }
+  .heading-intro{ text-align: center;}
+  .heading{ font-size: 8rem; text-align: center; }
+  .heading-text{ text-align: center; font-size: 1.8rem; }
+  .heading-text.sm{ font-size: 1.6rem; padding-bottom: 5rem; }
+  .heading-detail-flex{ justify-content: center; gap: 1rem; }
+  .heading-detail.hire{ width: 151px; text-align: center; }
 
 }
 

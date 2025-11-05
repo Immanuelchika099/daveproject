@@ -180,7 +180,7 @@ ion-icon{
 .navbar-toggle.open .bar:nth-child(2) { opacity: 0; transform: scaleX(.1); }
 .navbar-toggle.open .bar:nth-child(3) { transform: translateY(-0.7rem) rotate(-45deg); }
 /* -------------------------------------------- */
-/* --------- ARROW SCROLL ---- */
+/* --------- ARROW SCROLL #REMOVED---- */
 .arrow-scroll{
     position: absolute;
     opacity: 0;
