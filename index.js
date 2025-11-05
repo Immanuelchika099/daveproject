@@ -176,3 +176,43 @@ document.addEventListener('DOMContentLoaded', function () {
     arrowMain && arrowMain.classList.remove('hidden');
   }
 });
+
+// SMOOTH SCROLLING
+document.addEventListener('DOMContentLoaded', () =>{
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e){
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement){
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+container.addEventListener('scroll', () => {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  const containerRect = container.getBoundingClientRect();
+  const containerCenter = containerRect.left + containerRect.width / 2;
+
+  cards.forEach((card, index) => {
+    const cardRect = card.getBoundingClientRect();
+    const cardCenter = cardRect.left + cardRect.width / 2;
+
+    const distance = Math.abs(containerCenter - cardCenter);
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  dots.forEach(dot => dot.classList.remove('active'));
+  if (dots[closestIndex]) dots[closestIndex].classList.add('active');
+});
