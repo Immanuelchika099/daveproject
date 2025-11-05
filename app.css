@@ -644,9 +644,9 @@ h1.heading{
     translate: -50% -50%;
     background-image: conic-gradient(from var(--angle), transparent 10%,  #000000, #0041c4);
     border-radius: 5rem;
-    padding: 0.6px;
+    padding: 0.7px;
     z-index: -1;
-    animation: turner 4s linear infinite;
+    animation: turner 1.5s linear infinite;
 }
 @keyframes turner {
     from{
@@ -657,8 +657,8 @@ h1.heading{
     }
 }
 .contact-icon::before{
-    filter:blur(1.5rem)
-    opacity(1.5)
+    filter: blur(3px)
+    opacity(21)
 }
 
 /* COPYRIGHTS */
