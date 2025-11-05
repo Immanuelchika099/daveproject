@@ -95,6 +95,9 @@
     #particles-js{
         background-size: 150px 150px;
         animation: 45s linear infinite;
+        visibility: visible;
+        display: block;
+        
     }
 
   .heading-container { height: 60vh; width: 93%; padding: 3rem; border-radius: 4rem;}

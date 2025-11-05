@@ -85,6 +85,8 @@ body::after{
   background-size: 200px, 200px;
   z-index: -1;
   animation: moveStars 60s linear infinite;
+  transform: translateZ(0);
+  mix-blend-mode: screen;
 }
 
 @keyframes moveStars {
