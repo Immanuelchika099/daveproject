@@ -1,3 +1,55 @@
+// --- PARTICLES CODE
+particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 600, // amount of dots
+      density: { enable: true, value_area: 400 }
+    },
+    color: { value: "#ffffff" },
+    shape: { type: "circle" },
+    opacity: {
+      value: 0.2, // subtle opacity
+      random: false,
+      anim: { enable: false }
+    },
+    size: {
+      value: 1.3, // smaller dots
+      random: true,
+      anim: { enable: false }
+    },
+    line_linked: { enable: false },
+    move: {
+      enable: true,
+      speed: 0.5, // smooth slow motion
+      direction: "top", // only upward
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "bubble"
+      },
+      resize: true
+    },
+    modes: {
+      bubble: {
+        distance: 500,
+        size: 1.06,
+        duration: 1,
+        opacity: 0.5,
+        speed: 3
+      }
+    }
+  },
+  retina_detect: true
+});
+
 /* index.js — mobile toggle, nav show/hide on scroll, arrow visibility, close menu on link click */
 document.addEventListener('DOMContentLoaded', function () {
   const nav = document.getElementById('nav-bar-main');

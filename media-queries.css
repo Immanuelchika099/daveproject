@@ -52,26 +52,12 @@
   .nav-logo { width: 2rem; }
 
   /* adjust hero container width/padding */
-  .heading-container {
-    width: 95%;
-    margin-top: 5.5rem;
-    border-radius: 2.4rem;
-    padding: 2.4rem;
-    height: auto;
-  }
+  .heading-container { width: 95%; margin-top: 5.5rem; border-radius: 2.4rem; padding: 2.4rem; height: auto; }
 
   /* Stack hero items vertically */
-  .hero-ex {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2.5rem;
-    min-width: 100%;
-  }
+  .hero-ex { flex-direction: column; align-items: flex-start; gap: 2.5rem; min-width: 100%; }
 
-  h1.heading {
-    font-size: 4.6rem;
-    line-height: 1.05;
-  }
+  h1.heading { font-size: 4.6rem; line-height: 1.05; }
   .heading-intro { font-size: 1.8rem; }
   .heading-text { font-size: 1.8rem; }
   .heading-text.sm { font-size: 1.4rem; padding-bottom: 2rem; }
@@ -79,21 +65,14 @@
   .heading-detail-flex { flex-wrap: wrap; gap: 1rem; }
 
   /* Experience column becomes a horizontal row for mobile */
-  .experience-main {
-    flex-direction: row;
-    gap: 2rem;
-  }
+  .experience-main { flex-direction: row; gap: 2rem; }
   .hero-experience { margin-bottom: 0; }
 
   /* Arrow scroll centered and visible when toggled by JS */
   .arrow-scroll { width: 3.4rem; bottom: 2.8rem; }
 
   /* Projects grid: single column */
-  .pject-grid {
-    grid-template-columns: 1fr;
-    padding: 1rem 2rem;
-    gap: 2rem;
-  }
+  .pject-grid { grid-template-columns: 1fr; padding: 1rem 2rem; gap: 2rem; }
   .pject-card { width: 100%; }
 
   /* CTA cards stack vertically */
@@ -113,57 +92,31 @@
 
 /* --------------- Medium phones / large tablets  (<= 991px) --------------- */
 @media (max-width: 991px) {
+    #particles-js{
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+        opacity: 11;
+    }
+
   .heading-container { height: 60vh; width: 93%; padding: 3rem; border-radius: 4rem;}
   h1.heading { font-size: 5.6rem; }
   .pject-grid { grid-template-columns: repeat(2, 1fr); padding: 6rem; gap: 2rem; }
   .cta-card-main { grid-template-columns: repeat(2, 1fr); column-gap: 1.5rem; width: 95%; }
   .cta-card { height: auto; padding: 4rem 2.4rem; }
-  .card-img{
-    height: 20rem;
-  }
-  .main-body{
-    min-height: 100vh;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .hero-ex{
-    flex-direction: row;
-  }
-  .experience-main{
-    flex-direction: column;
-  }
-  .abt-img{
-    grid-row: 2/3;
-  }
-  .about-heading-text{
-    text-align: center;
-  }
-  .about-info{
-    text-align: center;
-    font-size: 1.7rem;
-  }
-  .abt-img{
-    display: flex;
-    justify-content: center;
-  }
-  .arrow-scroll{
-    opacity: 1;
-    bottom: 10rem;
-    z-index: 999999999;
-  }
+  .card-img{ height: 20rem; }
+  .main-body{ min-height: 100vh; height: auto; display: flex; flex-direction: column; justify-content: center; }
+  .hero-ex{ flex-direction: row;}
+  .experience-main{ flex-direction: column; }
+  .abt-img{ grid-row: 2/3; }
+  .about-heading-text{ text-align: center; }
+  .about-info{ text-align: center; font-size: 1.7rem; }
+  .abt-img{ display: flex; justify-content: center; }
+  .arrow-scroll{ opacity: 1; bottom: 10rem; z-index: 999999999; }
   .contact-contact{ align-items: center; }
   .contact-details{ align-items: center; gap: 2rem; }
   .footer{ gap: 4rem; }
-  .project-section{
-    display: flex;
-    flex-direction: column;
-    min-height: 230vh;
-    height: auto;
-    justify-content: center;
-
-  }
+  .project-section{ display: flex; flex-direction: column; min-height: 230vh; height: auto; justify-content: center; }
   .pject-grid{ grid-template-columns: 1fr; }
   .pject-main{ text-align: center; margin-bottom: 4rem;}
   .about-heading-text{ font-size: 3.8rem; text-align: center;}
@@ -172,10 +125,7 @@
   .feature-section{ margin-top: 0; gap: 4rem; display: flex; flex-direction: column; justify-content: center; }
   .about-info{ text-align: center; }
   .about-img{ width: 35rem; }
-  .copyrights{
-    padding-top: 3rem;
-    text-align: center;
-  }
+  .copyrights{ padding-top: 3rem; text-align: center; }
 }
 
 /* ---------------- Small phones <= 575px ---------------- */
@@ -226,6 +176,4 @@ img { max-width: 100%; height: auto; display: block; }
 p, span { word-wrap: break-word; }
 
 /* Smooth transitions for layout changes */
-.heading-container, .pject-grid, .cta-card-main, #nav-links {
-  transition: all .28s ease;
-}
+.heading-container, .pject-grid, .cta-card-main, #nav-links { transition: all .28s ease; }
