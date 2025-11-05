@@ -154,9 +154,32 @@ ion-icon{
     color: #fff;
     transform: rotate(-45deg);
 }
-.navbar-toggle{
-    display: none;
+
+/* -------------------------------------------- */
+/* ----------------- Nav mobile behavior ----------------- */
+/* Show hamburger on smaller screens */
+.navbar-toggle {
+  display: none; /* default hidden for desktop */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem;
+  z-index: 110;
 }
+.navbar-toggle .bar{
+  display:block;
+  width: 2.4rem;
+  height: 0.25rem;
+  margin: 0.45rem 0;
+  background: #fff;
+  border-radius: 2rem;
+  transition: transform .25s ease, opacity .2s ease;
+}
+/* Mobile nav open state (animated hamburger) */
+.navbar-toggle.open .bar:nth-child(1) { transform: translateY(0.7rem) rotate(45deg); }
+.navbar-toggle.open .bar:nth-child(2) { opacity: 0; transform: scaleX(.1); }
+.navbar-toggle.open .bar:nth-child(3) { transform: translateY(-0.7rem) rotate(-45deg); }
+/* -------------------------------------------- */
 /* --------- ARROW SCROLL ---- */
 .arrow-scroll{
     position: absolute;
@@ -298,9 +321,9 @@ h1.heading{
     -webkit-text-fill-color: transparent;
 }   
 
-/* -------------- ABOUT SECTION ------------ */
+/* ------------------------ ABOUT SECTION ------------ */
 #about-section{
-    min-height: 70vh;
+    min-height: 85vh;
     height: auto;
     margin: 0 auto;
     width: 90%;
@@ -315,7 +338,7 @@ h1.heading{
 .about-img{
     border: 1rem solid #030b14;
     border-radius: 4rem;
-    width: 43rem;
+    width: 40rem;
     box-shadow: 0px 0px 50px -30px #d1d1d1a0;
     animation: about-img 4s infinite alternate-reverse;
 }
@@ -422,7 +445,7 @@ h1.heading{
 
 /* -------------------------------- PROJECT SECTION */
 .project-section{
-    min-height: 150vh;
+    min-height: 160vh;
     height: auto;
     margin: 0 auto;
     width: 95%;
@@ -710,3 +733,15 @@ h1.heading{
     color: #f2f2f2;
     font-size: 1.2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVENESS */

@@ -1,0 +1,160 @@
+/* small-screen nav style (hidden by default) */
+@media (max-width: 768px) {
+  #nav-bar-main {
+    padding: 1rem 1.6rem;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  /* Show the toggle */
+  .navbar-toggle { display: block; }
+
+  /* Hide the nav links initially and style them as a full-screen overlay when opened */
+  #nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    right: 0;
+    left: 0;
+    background: linear-gradient(#000000d9, #000000e6);
+    display: none;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 3.5rem 2rem;
+    align-items: center;
+    z-index: 109;
+    min-height: calc(100vh - var(--nav-height));
+    transition: opacity .25s ease, transform .25s ease;
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+  /* Visible state */
+  #nav-bar-main.nav-open #nav-links {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* nav link style for mobile */
+  .nav-links-text {
+    font-size: 2.2rem;
+    display: block;
+    padding: .8rem 1.6rem;
+    border-radius: .8rem;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links-text.talk {
+    display: inline-flex;
+    gap: 1rem;
+    padding: .8rem 1.6rem;
+  }
+
+  .nav-logo { width: 3.2rem; }
+
+  /* adjust hero container width/padding */
+  .heading-container {
+    width: 95%;
+    margin-top: 5.5rem;
+    border-radius: 2.4rem;
+    padding: 2.4rem;
+    height: auto;
+  }
+
+  /* Stack hero items vertically */
+  .hero-ex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    min-width: 100%;
+  }
+
+  h1.heading {
+    font-size: 4.6rem;
+    line-height: 1.05;
+  }
+  .heading-intro { font-size: 1.8rem; }
+  .heading-text { font-size: 1.8rem; }
+  .heading-text.sm { font-size: 1.4rem; padding-bottom: 2rem; }
+
+  .heading-detail-flex { flex-wrap: wrap; gap: 1rem; }
+
+  /* Experience column becomes a horizontal row for mobile */
+  .experience-main {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .hero-experience { margin-bottom: 0; }
+
+  /* Arrow scroll centered and visible when toggled by JS */
+  .arrow-scroll { width: 3.4rem; bottom: 2.8rem; }
+
+  /* Projects grid: single column */
+  .pject-grid {
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem;
+    gap: 2rem;
+  }
+  .pject-card { width: 100%; }
+
+  /* CTA cards stack vertically */
+  .cta-card-main { grid-template-columns: 1fr; width: 100%; padding: 0 1rem; }
+  .cta-card { padding: 3rem 2rem; height: auto; }
+
+  /* About area: stack image then text */
+  .about-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
+  .about-img { width: 100%; max-width: 46rem; border-radius: 2rem; }
+
+  /* Footer: column layout */
+  .footer { width: 95%; padding: 6rem 2rem; border-top-left-radius: 3rem; border-top-right-radius: 3rem; }
+  .footer-section { flex-direction: column; gap: 2.5rem; padding-top: 4rem; align-items: center; }
+
+  .scroll-up-icon { right: 2.4rem; bottom: 3.6rem; }
+}
+
+/* --------------- Medium phones / large tablets  (<= 991px) --------------- */
+@media (max-width: 991px) {
+  .heading-container { height: auto; width: 92%; padding: 2.4rem; }
+  h1.heading { font-size: 5.6rem; }
+  .pject-grid { grid-template-columns: repeat(2, 1fr); padding: 6rem; gap: 2rem; }
+  .cta-card-main { grid-template-columns: repeat(2, 1fr); column-gap: 1.5rem; width: 95%; }
+  .cta-card { height: auto; padding: 4rem 2.4rem; }
+}
+
+/* ---------------- Small phones <= 575px ---------------- */
+@media (max-width: 575px) {
+  html { font-size: 56%; } /* small global scale for tiny screens */
+  .heading-container { margin-top: 4.5rem; border-radius: 1.2rem; padding: 1.6rem; }
+  h1.heading { font-size: 4rem; }
+  .about-info { font-size: 1.4rem; }
+  .services { font-size: 2.6rem; }
+  .card-header { font-size: 2.2rem; }
+  .card-text { font-size: 1.4rem; }
+  .ready-contact { font-size: 2.6rem; }
+  .footer-cme { font-size: 1.4rem; padding: 1rem 1.6rem; }
+  .contact-icon { width: 4rem; height: 4rem; }
+  .scroll-up-icon { right: 1.6rem; bottom: 2.6rem; }
+}
+
+/* --------------- Desktop adjustments (>=1200px) --------------- */
+@media (min-width: 1200px) {
+  .heading-container { width: 80%; max-width: 1400px; }
+  .pject-grid { padding: 8rem 10rem 3rem; }
+}
+
+/* ========== Small UX helpers ========== */
+/* Hide the arrow initially — JS toggles .visibleArrow */
+.arrow-scroll-main { display: block; }
+.arrow-scroll.hidden { opacity: 0 !important; pointer-events: none; transform: translateY(0); }
+
+/* scroll-up-icon hidden state controlled by class .show added from JS (already present) */
+
+/* Prevent images causing horizontal scroll on tiny screens */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Ensure long texts wrap */
+p, span { word-wrap: break-word; }
+
+/* Smooth transitions for layout changes */
+.heading-container, .pject-grid, .cta-card-main, #nav-links {
+  transition: all .28s ease;
+}
