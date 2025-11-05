@@ -21,7 +21,7 @@
     gap: 1.6rem;
     padding: 3.5rem 2rem;
     align-items: center;
-    z-index: 109;
+    z-index: 9;
     min-height: calc(100vh - var(--nav-height));
     transition: opacity .25s ease, transform .25s ease;
     transform: translateY(-2rem);
@@ -49,7 +49,7 @@
     padding: .8rem 1.6rem;
   }
 
-  .nav-logo { width: 3.2rem; }
+  .nav-logo { width: 3rem; }
 
   /* adjust hero container width/padding */
   .heading-container {
@@ -113,11 +113,70 @@
 
 /* --------------- Medium phones / large tablets  (<= 991px) --------------- */
 @media (max-width: 991px) {
-  .heading-container { height: auto; width: 92%; padding: 2.4rem; }
+  .heading-container { height: 60vh; width: 93%; padding: 3rem; border-radius: 4rem;}
   h1.heading { font-size: 5.6rem; }
   .pject-grid { grid-template-columns: repeat(2, 1fr); padding: 6rem; gap: 2rem; }
   .cta-card-main { grid-template-columns: repeat(2, 1fr); column-gap: 1.5rem; width: 95%; }
   .cta-card { height: auto; padding: 4rem 2.4rem; }
+  .main-body{
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-ex{
+    flex-direction: row;
+  }
+  .experience-main{
+    flex-direction: column;
+  }
+  .abt-img{
+    grid-row: 2/3;
+  }
+  .about-heading-text{
+    text-align: center;
+  }
+  .about-info{
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .abt-img{
+    display: flex;
+    justify-content: center;
+  }
+  .arrow-scroll{
+    opacity: 1;
+    bottom: 10rem;
+    z-index: 999999999;
+  }
+  .contact-contact{ align-items: center; }
+  .contact-details{ align-items: center; gap: 2rem; }
+  .footer{ gap: 4rem; }
+  .project-section{
+    display: flex;
+    flex-direction: column;
+    min-height: 240vh;
+    justify-content: center;
+
+  }
+  .pject-grid{ grid-template-columns: 1fr; }
+  .pject-main{ text-align: center; margin-bottom: 4rem;}
+  .about-heading-text{ font-size: 3.8rem; text-align: center;}
+  .project-detail{ display: none; }
+  #scrollContainer.cta-card-main{ grid-template-columns: 1fr; gap: 3rem; }
+  .feature-section{
+    margin-top: 0;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column; justify-content: center;
+  }
+  .about-info{
+    text-align: center;
+  }
+  .about-img{
+    width: 35rem;
+  }
 }
 
 /* ---------------- Small phones <= 575px ---------------- */
@@ -133,6 +192,38 @@
   .footer-cme { font-size: 1.4rem; padding: 1rem 1.6rem; }
   .contact-icon { width: 4rem; height: 4rem; }
   .scroll-up-icon { right: 1.6rem; bottom: 2.6rem; }
+
+  .experience-main{
+    display: none;
+  }
+  .hero-ex{
+    flex-direction: column;
+    align-items: center;
+  }
+  .heading-intro{
+    text-align: center;
+  }
+  .heading{
+    font-size: 8rem;
+    text-align: center;
+  }
+  .heading-text{
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .heading-text.sm{
+    font-size: 1.6rem;
+    padding-bottom: 5rem;
+  }
+  .heading-detail-flex{
+    justify-content: center;
+    gap: 1rem;
+  }
+  .heading-detail.hire{
+    width: 151px;
+    text-align: center;
+  }
+
 }
 
 /* --------------- Desktop adjustments (>=1200px) --------------- */

@@ -217,7 +217,7 @@ ion-icon{
     justify-content: center;
     margin: 0 auto;
     /* max-width: 160rem; */
-    z-index: 999999;
+    z-index: 5;
     margin-top: 7rem;
     height: 80vh;
     background: radial-gradient(circle at 0% 0%, #010306d7, #050510d7 95%);
@@ -733,15 +733,3 @@ h1.heading{
     color: #f2f2f2;
     font-size: 1.2rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-/* RESPONSIVENESS */
