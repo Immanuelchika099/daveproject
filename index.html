@@ -26,11 +26,11 @@
 
                 <!-- NAV LINKS -->
                 <ul id="nav-links" class="nav-links button">
-                    <li><a class="nav-links-text" href="#main-body">Home</a></li>
-                    <li class="link-icon"><a class="nav-links-text" href="#about-section">About</a></li>
-                    <li class="link-icon"><a class="nav-links-text" href="#feature-section">Services</a></li>
-                    <li class="link-icon"><a class="nav-links-text" href="#project-section">Projects</a></li>
-                    <li class="link-icon"><a class="nav-links-text talk" href="#footer">Contact me<ion-icon name="send-outline"></ion-icon></a></li>
+                    <ul><a class="nav-links-text" href="#main-body">Home</a></ul>
+                    <ul class="link-icon"><a class="nav-links-text" href="#about-section">About</a></ul>
+                    <ul class="link-icon"><a class="nav-links-text" href="#feature-section">Services</a></ul>
+                    <ul class="link-icon"><a class="nav-links-text" href="project.html">Projects</a></ul>
+                    <ul class="link-icon"><a class="nav-links-text talk" href="#footer">Contact me<ion-icon name="send-outline"></ion-icon></a></ul>
                 </ul>
                 
                 <!-- MENU TOOGLE BAR -->
@@ -53,7 +53,7 @@
                         <p class="heading-text">Product Designer</p>
                         <span class="heading-text sm">(Graphic Design, Ux Design)</span>
                         <div class="heading-detail-flex">
-                            <a class="heading-detail hire" href=""><span>Show Project</span></a>
+                            <a class="heading-detail hire" href=""><span>View Projects</span></a>
                             <a class="heading-detail down" href="CV.pdf" download="CV.pdf"><span class="heading-detail-down">Download CV<ion-icon class="download-icon" name="download-outline"></ion-icon></span></a>
                         </div>
                     </ul>
@@ -84,8 +84,8 @@
             <ul class="about-texts">
                 <span class="about-heading-text">About Me</span>
                 <p class="about-info">A detailed-oriented Graphics and UI/UX Designer with 4 years of Practical Exposure.
-                    Proficient in Figma, Adobe Photoshop, Illustrator, with a soft skill in video editing. <br>
-                    well-versed in real-time integration in creating attractive and impactful visuals for
+                    Proficient in Figma, Adobe Photoshop, Illustrator, with a soft skill in video editing. <br><br>
+                    Well-versed in real-time integration in creating attractive and impactful visuals for
                     various design project using a modern approach. Eager to leverage my skills and
                     creativity to a dynamic business.
                 </p>
@@ -118,12 +118,65 @@
         </div>
     </section>
 
+    <!-------------------- EXPERIENCE SECTION -->
+     <section id="xperience-section" class="xperience-section">
+        <ul class="xper-head">
+            <span class="about-heading-text">My Work Experience</span><br>
+            <span class="services xper">(Product Design)</span>
+        </ul>
+        <ul class="xper-cardgrid" id="scrollContainer">
+            <ul class="cta-card xper won">
+                <span class="card-header">NAV Hackathon Project</span>
+                <li><p class="card-textx">Joined a 5 man team of designers and developers called the "Hacksmith" for the competition. </p></li>
+                <li><p class="card-textx">Created a crowd-funding website where users can create a funding campaign and get the campaign funded by investors who are interested with ease.</p></li>
+            </ul>
+            <ul class="cta-card xper">
+                <span class="card-header">HomeLife Brands</span>
+                <li><p class="card-textx">Worked on the sister company called: The Pet Entrepreneurs (TPE).</p></li>
+                <li><p class="card-textx snd">Iterated TPE's logo, handled the Ux design of the landing page of the website, created Ad designs for TPE's podcast event.</p></li>
+                <ul class="card-flex">
+                    <img class="card-icn" src="images/USA_flag.PNG" alt="">
+                    <span><a class="card-ls" href="https://www.homelifemedia.com">Live Site <ion-icon class="view-icon ex" name="arrow-forward-outline"></ion-icon></a></span>
+                </ul>
+            </ul>
+            <ul class="cta-card xper">
+                <span class="card-header">The Eztech Group</span>
+                <li><p class="card-textx">Designed branding Ads and website UX to solve design the company design needs.</p></li>
+                <li><p class="card-textx snd">Taught over 50 high-school kids graphics design and scratch programming language.</p></li>
+                <ul class="card-flex">
+                    <img class="card-icn" src="images/nigeria_flag.PNG" alt="">
+                    <span><a class="card-ls" href="https://www.theeztechgroup.com">Live Site <ion-icon class="view-icon ex" name="arrow-forward-outline"></ion-icon></a></span>
+                </ul>
+            </ul>
+            <ul class="cta-card xper">
+                <span class="card-header">Divnerix Innovations</span>
+                <li><p class="card-textx">Worked with a team of designers and developers in delivering numerous creative websites and mobile apps.</p></li>
+                <li><p class="card-textx snd">Personally iterated the companies website with Ux design.</p></li>
+                <ul class="card-flex">
+                    <img class="card-icn" src="images/nigeria_flag.PNG" alt="">
+                    <span><a class="card-ls" href="https://www.divnerix.com">Live Site <ion-icon class="view-icon ex" name="arrow-forward-outline"></ion-icon></a></span>
+                </ul>
+            </ul>
+            <ul class="cta-card xper">
+                <span class="card-header">Engageathon</span>
+                <li><p class="card-textx">Deliver designs that align with brand identity, collaborated with cross-functional teams for branding projects.</p></li>
+                <li><p class="card-textx snd">Collaborated with teams to iterate the companie's logo and the UX design projects of sister companies .</p></li>
+                <ul class="card-flex">
+                    <img class="card-icn" src="images/USA_flag.PNG" alt="">
+                    <span><a class="card-ls" href="https://www.engageathon.com">Live Site <ion-icon class="view-icon ex" name="arrow-forward-outline"></ion-icon></a></span>
+                </ul>
+            </ul>
+            
+            
+        </ul>
+        <div class="pagination" id="pagination"></div>
+     </section>
+
     <!--------------------- PROJECT SECTION -->
      <section id="project-section" class="project-section">
         <ul class="pject-main">
             <span class="services">My Works</span><br>
-            <span class="about-heading-text">My recent projects</span><br>
-            <span class="project-detail">Here is a selection of my most recent works</span>
+            <span class="about-heading-text">My projects</span><br>
         </ul>
 
         <div class="pject-grid">
@@ -161,41 +214,6 @@
         <div class="view-main">
             <span><a class="heading-detail view" href="#">View All <ion-icon class="view-icon" name="arrow-forward-outline"></ion-icon></a></span>
         </div>
-     </section>
-
-    <!-------------------- EXPERIENCE SECTION -->
-     <section id="xperience-section" class="xperience-section">
-        <ul class="xper-head">
-            <span class="about-heading-text">My Work Experience</span><br>
-            <span class="services xper">(Product Design)</span>
-        </ul>
-        <ul class="xper-cardflex">
-            <ul class="cta-card xper won">
-                <span><ion-icon class="card-icon"name="layers-outline"></ion-icon></span>
-                <span class="card-header">Brand Identity Design</span>
-                <p class="card-text">Crafting memorable brand identities that capture your vision through bold, simple, and timeless logo concepts.</p>
-            </ul>
-            <ul class="cta-card xper">
-                <span><ion-icon class="card-icon"name="layers-outline"></ion-icon></span>
-                <span class="card-header">Brand Identity Design</span>
-                <p class="card-text">Crafting memorable brand identities that capture your vision through bold, simple, and timeless logo concepts.</p>
-            </ul>
-            <ul class="cta-card xper">
-                <span><ion-icon class="card-icon"name="layers-outline"></ion-icon></span>
-                <span class="card-header">Brand Identity Design</span>
-                <p class="card-text">Crafting memorable brand identities that capture your vision through bold, simple, and timeless logo concepts.</p>
-            </ul>
-            <ul class="cta-card xper">
-                <span><ion-icon class="card-icon"name="layers-outline"></ion-icon></span>
-                <span class="card-header">Brand Identity Design</span>
-                <p class="card-text">Crafting memorable brand identities that capture your vision through bold, simple, and timeless logo concepts.</p>
-            </ul>
-            <ul class="cta-card xper">
-                <span><ion-icon class="card-icon"name="layers-outline"></ion-icon></span>
-                <span class="card-header">Brand Identity Design</span>
-                <p class="card-text">Crafting memorable brand identities that capture your vision through bold, simple, and timeless logo concepts.</p>
-            </ul>
-        </ul>
      </section>
 
     <!--------------------- FOOTER SECTION  -->

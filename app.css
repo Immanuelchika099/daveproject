@@ -56,7 +56,7 @@ html {
 }
 
 /* ====== SMOOTH DARK BACKGROUND ====== */
-body {
+body{
   overflow-x: hidden;
   background: radial-gradient(circle at 30% 30%, #03070f, #000000 95%);
   background-size: contain;
@@ -87,6 +87,7 @@ body::after{
   animation: moveStars 60s linear infinite;
   transform: translateZ(0);
   mix-blend-mode: screen;
+  cursor: pointer;
 }
 
 @keyframes moveStars {
@@ -97,8 +98,6 @@ body::after{
         background-position: -10000px 5000px, -8000px 20000px, -5000px 1000px;
     }
 }
-
-
 .main-body{
     position: relative;
     width: 100%;
@@ -106,12 +105,15 @@ body::after{
 }
 
 /* ----- LIST STYLES ----- */
-li,
 a{
-    list-style: none;
     text-decoration: none;
-    color: var(--background-white);
+    color: #fff;
     display: inline-block;
+}
+li{
+    list-style: square;
+    color: #fff;
+    font-size: 3rem;
 }
 /* --------------------------- MAIN HEADING -------------------- */
 
@@ -196,34 +198,6 @@ ion-icon{
 .navbar-toggle.open .bar:nth-child(2) { opacity: 0; transform: scaleX(.1); }
 .navbar-toggle.open .bar:nth-child(3) { transform: translateY(-0.7rem) rotate(-45deg); }
 /* -------------------------------------------- */
-/* --------- ARROW SCROLL #REMOVED---- */
-.arrow-scroll{
-    position: absolute;
-    opacity: 0;
-    animation: arrow-scroll 4500ms infinite alternate-reverse forwards;
-    /* animation-delay: 1s; */
-    width: 3rem;
-    bottom: 3.5rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 98;
-}
-@keyframes arrow-scroll {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 /* -------------------CONTAINER SECTION */
@@ -362,10 +336,10 @@ h1.heading{
 
 /* ------------------------ ABOUT SECTION ------------ */
 #about-section{
-    min-height: 85vh;
+    min-height: 100vh;
     height: auto;
     margin: 0 auto;
-    width: 90%;
+    width: 88%;
     display: flex;
     align-items: center;
 }
@@ -376,7 +350,7 @@ h1.heading{
 }
 .about-img{
     border: 1rem solid #030b14;
-    border-radius: 4rem;
+    border-radius: 5rem;
     width: 40rem;
     box-shadow: 0px 0px 50px -30px #d1d1d1a0;
     animation: about-img 4s infinite alternate-reverse;
@@ -409,7 +383,7 @@ h1.heading{
 
 /* ----------------------------------- FEATURE SECTION */
 .feature-section{
-    min-height: 90vh;
+    min-height: 50vh;
     height: auto;
     margin: 0 auto;
     width: 90%;
@@ -448,8 +422,53 @@ h1.heading{
 .card-header{ color: #fff; font-size: 2.8rem; }
 .card-text{ color: #d3d3d3; font-size: 1.5rem; text-align: center; }
 
+
+/* ------------------------------------- EXPERIENCE SECTION */
+.xperience-section{ display: flex; flex-direction: column; justify-content: center; min-height: 150vh; height: auto; width: 90%; margin: 0 auto; }
+.xper-cardgrid{ display: grid; grid-template-columns: repeat(3, 1fr); justify-self: center; gap: 2rem; }
+.cta-card.xper.won{ height: 100%; grid-row: 1 / span 2; }
+.xper-head{ padding-bottom: 7rem; }
+.cta-card.xper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 1rem 6rem;
+    background: #042c7b06;
+    backdrop-filter: blur(3px);
+    box-shadow: 0px 12px 20px -10px #0e153cba;
+    border-radius: 2rem;
+    font-size: var(--normal-text);
+    font-weight: var(--medium-weight);
+    border: 2px solid #232323f4;
+}
+.card-textx{
+    text-align: left;
+}
+.card-textx.snd{
+    padding-bottom: 3rem;
+}
+.card-flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.card-ls{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.card-icn{
+    width: 3rem;
+}
+.view-icon.ex {
+    transform: rotate(-45deg);
+}
+
 /* -------------------------------- PROJECT SECTION */
-.project-section{ min-height: 130vh; height: auto; margin: 0 auto; width: 95%; }
+.project-section{ min-height: 155vh; height: auto; margin: 0 auto; width: 95%; }
 .pject-main{ margin-bottom: 10rem; }
 .project-detail{ color: #fff; font-size: 2.4rem; }
 .pject-grid{ margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); justify-self: center; gap: 2rem; background: transparent; backdrop-filter: blur(3px); box-shadow: 0px 0px 90px -60px #525252e7; padding: 8rem 8rem 3rem; }
@@ -461,37 +480,7 @@ h1.heading{
 .view-main{ display: flex; justify-content: center; }
 .heading-detail.view{ width: 40rem; font-size: 2rem; text-align: center; z-index: 1; margin-top: 3rem; align-items: center; display: flex; justify-content: center; gap: 1rem; }
 .view-icon{ color: #fff; transform: none; font-size: 2rem; }
-.heading-detail.view:active, .heading-detail.view:hover{
-    transform: scale(0.90, 0.95);
-    cursor: pointer;
-}
-
-/* ------------------------------------- EXPERIENCE SECTION */
-.xperience-section{ display: flex; flex-direction: column; justify-content: center; min-height: 140vh; height: auto; width: 90%; margin: 0 auto; }
-.xper-cardflex{ display: grid; grid-template-columns: repeat(3, 1fr); justify-self: center; gap: 2rem; }
-.cta-card.xper.won{ height: 100%; grid-row: 1 / span 2; }
-.xper-head{
-    padding-bottom: 7rem;
-}
-.cta-card.xper{
-    position: relative;
-    height: 30rem;
-    width: 40rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    align-items: center;
-    padding: 5rem 3rem;
-    background: #042c7b06;
-    backdrop-filter: blur(3px);
-    box-shadow: 0px 12px 20px -10px #0e153cba;
-    border-radius: 2rem;
-    font-size: var(--normal-text);
-    font-weight: var(--medium-weight);
-    border: 2px solid #232323f4;
-}
-
+.heading-detail.view:active, .heading-detail.view:hover{ transform: scale(0.90, 0.95); cursor: pointer; }
 
 /* ----------------------------------- FOOTER SECTION --------- */
 .footer{

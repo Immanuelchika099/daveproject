@@ -216,3 +216,18 @@ container.addEventListener('scroll', () => {
   dots.forEach(dot => dot.classList.remove('active'));
   if (dots[closestIndex]) dots[closestIndex].classList.add('active');
 });
+
+
+// DOT UNDERNEAT FEATURE-CTA-CARD
+const container = document.getElementById('scrollContainer');
+const cards = container.querySelectorAll('.cta-card');
+const pagination = document.getElementById('pagination');
+
+// Create dots
+cards.forEach((_, index) => {
+  const dot = document.createElement('div');
+  dot.classList.add('pagination-dot');
+  if (index === 0) dot.classList.add('active');
+  pagination.appendChild(dot);
+});
+const dots = pagination.querySelectorAll('.pagination-dot');

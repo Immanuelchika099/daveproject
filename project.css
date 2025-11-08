@@ -1,0 +1,210 @@
+/* STYLES.CSS */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Trap';
+    src: url('Trap-Regular.otf') format('truetype');
+}
+
+/* -------------------- ROOT ELEMENTS -------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trap','Inter', sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+:root {
+    /* ----- NAV-BAR ----- */
+    --nav-height: 5rem;
+}
+
+/* ====== SMOOTH DARK BACKGROUND ====== */
+body {
+  overflow-x: hidden;
+  background: radial-gradient(circle at 30% 30%, #03070f, #000000 95%);
+  background-size: contain;
+  animation: smoothDarkMove 25s ease-in-out infinite;
+  position: relative;
+}
+body::after{
+    position: absolute;
+    content: '';
+    background: linear-gradient(#0000005e, #00000044);
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+/* ====== PARTICLES ====== */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-size: 200px, 200px;
+  z-index: -1;
+  animation: moveStars 60s linear infinite;
+  transform: translateZ(0);
+  mix-blend-mode: screen;
+}
+
+@keyframes moveStars {
+    from{
+        background-position: 0 0, 0 0, 0 0;
+    }
+    to{
+        background-position: -10000px 5000px, -8000px 20000px, -5000px 1000px;
+    }
+}
+.main-body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ----- LIST STYLES ----- */
+li,
+a{
+    list-style: none;
+    text-decoration: none;
+    color: var(--background-white);
+    display: inline-block;
+}
+/* --------------------------- MAIN HEADING -------------------- */
+
+/* ------------------------ NAVIGATION  BAR */
+#nav-bar-main{
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-around; 
+    gap: 15rem;
+    align-items: center;
+    height: var(--nav-height);
+}
+.nav-bar-main.button{
+    display: flex;
+    padding: 1rem 3rem;
+    background: #000000c0;
+    border: 2px solid #21252958;
+    /* border-radius: 5rem; */
+    backdrop-filter: blur(4px);
+    color: #fff;
+}
+#nav-bar-main.hide{
+    transform: translateY(-100%);
+}
+.nav-logo{
+    width: 2.7rem;
+}
+#nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.nav-links-text{
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    transition: 0.2s ease-in;
+}
+.nav-links-text:active, .nav-links-text:hover{
+    color: #0041c4;
+    cursor: pointer;
+}
+.nav-links-text.talk{
+    display: flex;
+    gap: 1rem;
+    padding: 0.7rem;
+    background: #000000;
+    border: 1px solid #2125299e;
+    border-radius: 5rem;
+    color: #fff;
+}
+ion-icon{
+    color: #fff;
+    transform: rotate(-45deg);
+}
+
+/* -------------------------------------------- */
+/* ----------------- Nav mobile behavior ----------------- */
+/* Show hamburger on smaller screens */
+.navbar-toggle {
+  display: none; /* default hidden for desktop */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem;
+  z-index: 110;
+}
+.navbar-toggle .bar{
+  display:block;
+  width: 2.4rem;
+  height: 0.25rem;
+  margin: 0.45rem 0;
+  background: #fff;
+  border-radius: 2rem;
+  transition: transform .25s ease, opacity .2s ease;
+}
+/* Mobile nav open state (animated hamburger) */
+.navbar-toggle.open .bar:nth-child(1) { transform: translateY(0.7rem) rotate(45deg); }
+.navbar-toggle.open .bar:nth-child(2) { opacity: 0; transform: scaleX(.1); }
+.navbar-toggle.open .bar:nth-child(3) { transform: translateY(-0.7rem) rotate(-45deg); }
+/* -------------------------------------------- */
+
+
+/* ----------------------------------- FEATURE SECTION */
+.feature-section{
+    min-height: 90vh;
+    height: auto;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 9rem;
+    margin-top: 3rem;
+}
+.services{
+    font-size: 3rem;
+    background: linear-gradient(135deg, #0752ba, #7b7bfa, #4169E1 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --------------- CTA CARDS */
+.cta-card-main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+}
+/* ------------------------------- CTA CARD */
+.cta-card{ height: 30rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-items: center; padding: 5rem 3rem; background: #0041c406; backdrop-filter: blur(2px); box-shadow: 0px 0px 40px -25px #747272e7; border-radius: 2rem; font-size: var(--normal-text); font-weight: var(--medium-weight); transition: 250ms ease-in-out; border: 2px solid #232323f4; }  
+.cta-card.one:hover,
+.cta-card:active { transform: scale(1.02, 1.02); cursor: pointer; }
+.cta-card.two:hover,
+.cta-card:active { transform: scale(1.02, 1.02); cursor: pointer; }
+.cta-card.three:hover,
+.cta-card:active { transform: scale(1.02, 1.02); cursor: pointer; }
+/* CARD ICONS */
+.card-icon{ transform: none; color: #0752ba; font-size: 5rem; }
+/* CARD TEXT */
+.card-header{ color: #fff; font-size: 2.8rem; }
+.card-text{ color: #d3d3d3; font-size: 1.5rem; text-align: center; }

@@ -72,7 +72,8 @@
   .arrow-scroll { width: 3.4rem; bottom: 2.8rem; }
 
   /* Projects grid: single column */
-  .pject-grid { grid-template-columns: 1fr; padding: 1rem 2rem; gap: 2rem; }
+  .project-section { width: 100%; }
+  .pject-grid { grid-template-columns: 1fr; padding: 0.5rem 1rem; gap: 1rem; }
   .pject-card { width: 100%; }
 
   /* CTA cards stack vertically */
@@ -81,7 +82,7 @@
 
   /* About area: stack image then text */
   .about-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
-  .about-img { width: 100%; max-width: 40rem; border-radius: 2rem; }
+  .about-img { width: 100%; max-width: 40rem; }
 
   /* Footer: column layout */
   .footer { width: 95%; padding: 6rem 2rem; border-top-left-radius: 3rem; border-top-right-radius: 3rem; }
@@ -96,10 +97,8 @@
         background-size: 150px 150px;
         animation: 45s linear infinite;
         visibility: visible;
-        display: block;
-        
+        display: block;       
     }
-
   .heading-container { height: 60vh; width: 93%; padding: 3rem; border-radius: 4rem;}
   h1.heading { font-size: 5.6rem; }
   .pject-grid { grid-template-columns: repeat(2, 1fr); padding: 6rem; gap: 2rem; }
@@ -109,10 +108,9 @@
   .main-body{ min-height: 100vh; height: auto; display: flex; flex-direction: column; justify-content: center; }
   .hero-ex{ flex-direction: row;}
   .experience-main{ flex-direction: column; }
-  .abt-img{ grid-row: 2/3; }
   .about-heading-text{ text-align: center; }
   .about-info{ text-align: center; font-size: 1.7rem; }
-  .abt-img{ display: flex; justify-content: center; }
+  .abt-img{ display: flex; justify-content: center; grid-row: 2/3; }
   .arrow-scroll{ opacity: 1; bottom: 10rem; z-index: 999999999; }
   .contact-contact{ align-items: center; }
   .contact-details{ align-items: center; gap: 2rem; }
@@ -125,33 +123,81 @@
   #scrollContainer.cta-card-main{ grid-template-columns: 1fr; gap: 3rem; }
   .feature-section{ margin-top: 0; gap: 4rem; display: flex; flex-direction: column; justify-content: center; }
   .about-info{ text-align: center; }
-  .about-img{ width: 35rem; }
+  .about-img{ width: 30rem; }
   .copyrights{ padding-top: 3rem; text-align: center; }
+
+  /* PAGINATION */
+    .pagination{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .pagination-dot{
+        width: 10px;    
+        height: 10px;
+        border-radius: 50%;
+        background: transparent;
+        border: 1px solid blanchedalmond;
+        margin: 0 5px;
+        transition: background-color 0.3s;
+        z-index: 11;
+    }
+    .pagination-dot.active{
+        background-color: blanchedalmond;
+    }
+  .xperience-section{
+    min-height: 110vh;
+    width: 93%;
+  }
+  
+  .cta-card.xper.won{
+    grid-row: 1 / span 1;
+  }
+  .xper-head{
+    padding-bottom: 4rem
+  }
+  #scrollContainer.xper-cardgrid{
+    padding: ;
+    width: 100%;
+    height: 45rem;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    scroll-behavior: smooth;
+    overflow-x: auto;
+  }
+  #scrollContainer.xper-cardgrid::-webkit-scrollbar{
+    display: none;
+  }
+  .cta-card.xper{
+    width: 350px;
+    scroll-snap-align: start;
+  }
 }
 
 /* ---------------- Small phones <= 575px ---------------- */
 @media (max-width: 575px) {
   html { font-size: 56%; } /* small global scale for tiny screens */
-  .heading-container { margin-top: 4.5rem; border-radius: 1.2rem; padding: 1.6rem; }
-  h1.heading { font-size: 4rem; }
-  .about-info { font-size: 1.4rem; }
+  .heading-container { margin-top: 4.5rem; border-radius: 3rem; padding: 1.6rem; height: 80vh; }
+  h1.heading { font-size: 4.5rem; }
+  .about-info { font-size: 1.7rem; }
   .services { font-size: 2.6rem; }
   .card-header { font-size: 2.2rem; }
-  .card-text { font-size: 1.4rem; }
+  .card-text { font-size: 1.7rem; text-align: center; }
+  .card-textx { font-size: 1.7rem; text-align: center; }
   .ready-contact { font-size: 2.6rem; }
   .footer-cme { font-size: 1.4rem; padding: 1rem 1.6rem; }
   .contact-icon { width: 4rem; height: 4rem; }
   .scroll-up-icon { right: 1.6rem; bottom: 2.6rem; }
 
   #project-section.project-section{
-    height: 110vh;
+    height: 100vh;
   }
   .experience-main{display: none;}
   .hero-ex{ flex-direction: column; align-items: center; }
   .heading-intro{ text-align: center;}
-  .heading{ font-size: 8rem; text-align: center; }
-  .heading-text{ text-align: center; font-size: 1.8rem; }
-  .heading-text.sm{ font-size: 1.6rem; padding-bottom: 5rem; }
+  .heading{ font-size: 9rem; text-align: center; font-weight: 750;}
+  .heading-text{ text-align: center; font-size: 2.2rem; }
+  .heading-text.sm{ font-size: 2rem; padding-bottom: 5rem; }
   .heading-detail-flex{ justify-content: center; gap: 1rem; }
   .heading-detail.hire{ width: 151px; text-align: center; }
 
