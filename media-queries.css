@@ -146,10 +146,10 @@
         background-color: blanchedalmond;
     }
   .xperience-section{
-    min-height: 110vh;
-    width: 93%;
+    min-height: 100vh;
+    height: auto;
+    width: 95%;
   }
-  
   .cta-card.xper.won{
     grid-row: 1 / span 1;
   }
@@ -165,13 +165,8 @@
     scroll-behavior: smooth;
     overflow-x: auto;
   }
-  #scrollContainer.xper-cardgrid::-webkit-scrollbar{
-    display: none;
-  }
-  .cta-card.xper{
-    width: 350px;
-    scroll-snap-align: start;
-  }
+  #scrollContainer.xper-cardgrid::-webkit-scrollbar{ display: none; }
+  .cta-card.xper{ width: 350px; scroll-snap-align: start; }
 }
 
 /* ---------------- Small phones <= 575px ---------------- */
