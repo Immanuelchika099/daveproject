@@ -425,16 +425,17 @@ h1.heading{
 
 /* ------------------------------------- EXPERIENCE SECTION */
 .xperience-section{ display: flex; flex-direction: column; justify-content: center; min-height: 150vh; height: auto; width: 90%; margin: 0 auto; }
-.xper-cardgrid{ display: grid; grid-template-columns: repeat(3, 1fr); justify-self: center; gap: 2rem; }
-.cta-card.xper.won{ height: 100%; grid-row: 1 / span 2; }
+.xper-cardgrid{ display: grid; grid-template-columns: repeat(3, 1fr); justify-self: center; gap: 2rem; align-items: center; }
+.cta-card.xper.won{ height: 60%; grid-row: 1 / span 2; }
 .xper-head{ padding-bottom: 7rem; }
 .cta-card.xper{
+    height: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0;
-    padding: 1rem 6rem;
+    padding: 1.5rem 5rem;
     background: #042c7b06;
     backdrop-filter: blur(3px);
     box-shadow: 0px 12px 20px -10px #0e153cba;
@@ -445,6 +446,7 @@ h1.heading{
 }
 .card-textx{
     text-align: left;
+    font-size: 1.6rem;
 }
 .card-textx.snd{
     padding-bottom: 3rem;
