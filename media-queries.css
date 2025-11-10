@@ -190,7 +190,8 @@
   .scroll-up-icon { right: 1.6rem; bottom: 2.6rem; }
 
   #project-section.project-section{
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
   }
   .experience-main{display: none;}
   .hero-ex{ flex-direction: column; align-items: center; }
