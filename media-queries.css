@@ -185,7 +185,7 @@
   .scroll-up-icon { right: 1.6rem; bottom: 2.6rem; }
 
   #project-section.project-section{
-    min-height: 100vh;
+    min-height: 110vh;
     height: auto;
   }
   .experience-main{display: none;}
