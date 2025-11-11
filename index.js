@@ -231,3 +231,9 @@ cards.forEach((_, index) => {
   pagination.appendChild(dot);
 });
 const dots = pagination.querySelectorAll('.pagination-dot');
+
+
+AOS.init({
+  duration: 1500,
+  once: false
+})
