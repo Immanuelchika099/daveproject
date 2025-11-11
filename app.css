@@ -1,63 +1,5 @@
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 30% 30%, #03070f, #000000 100%);
-            z-index: 9999; /* Ensures it is above everything else */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 1;
-            transition: opacity 30s ease-out; /* The crucial fade-out animation */
-        }
-        
-        /* When the 'loaded' class is added by JS, it fades out */
-        .loaded #preloader {
-            opacity: 0;
-            /* Keep it visible during the 1s fade-out transition */
-            visibility: hidden; 
-        }
-
-        /* Loading Content (Your logo/text) */
-        .loader-content {
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            transition: 0.3s all linear;
-            animation: loader 1s ease-in-out;
-        }
-        @keyframes loader {
-            0%{
-                transform: scale(1.0) ;
-            }
-            100%{
-                transform: scale(1.4) ;
-            }
-        }
-
-        .loader-logo{
-            width: 5rem;
-        }
-
-        /* Main Content (What is revealed) */
-        #main-body {
-            /* Start with main content hidden to prevent 'flashing' */
-            opacity: 1; 
-            transition: opacity 1s ease-in;
-        }
-        
-        /* When the 'loaded' class is added, the main content fades in */
-        body.loaded #main-body {
-            opacity: 1;
-        }
-
-
 /* STYLES.CSS */
+
 @font-face {
     font-family: 'Inter';
     src: url('Inter-VariableFont_opsz\,wght.ttf') format('truetype');
@@ -157,8 +99,8 @@ body::after{
     }
 }
 .main-body{
-    width: 100%;
     position: relative;
+    width: 100%;
     height: 100%;
 }
 
@@ -265,8 +207,8 @@ ion-icon{
     justify-content: center;
     margin: 0 auto;
     z-index: 5;
-    margin-top: 10rem;
-    height: 100vh;
+    margin-top: 7rem;
+    height: 80vh;
     background: radial-gradient(circle at 0% 0%, #010306d7, #050510d7 95%);
     width: 85%;
     border-radius: 13rem;
