@@ -120,7 +120,7 @@
   .pject-main{ text-align: center; margin-bottom: 4rem;}
   .about-heading-text{ font-size: 3.8rem; text-align: center;}
   .project-detail{ display: none; }
-  #scrollContainer.cta-card-main{ grid-template-columns: 1fr; gap: 3rem; }
+  .cta-card-main{ grid-template-columns: 1fr; gap: 3rem; }
   .feature-section{ margin-top: 0; gap: 4rem; display: flex; flex-direction: column; justify-content: center; }
   .about-info{ text-align: center; }
   .about-img{ width: 30rem; }
@@ -128,9 +128,11 @@
 
   /* PAGINATION */
     .pagination{
-        display: flex;
+        display: flex !important;
         justify-content: center;
+        position: relative;
         margin-top: 2rem;
+        z-index: 9999999;
     }
     .pagination-dot{
         width: 10px;    
@@ -140,7 +142,7 @@
         border: 1px solid blanchedalmond;
         margin: 0 5px;
         transition: background-color 0.3s;
-        z-index: 11;
+        z-index: 1199999999999999999;
     }
     .pagination-dot.active{
         background-color: blanchedalmond;
@@ -150,13 +152,18 @@
     height: auto;
     width: 95%;
   }
+  .cta-card.xper{
+    height: 40rem;
+  }
   .cta-card.xper.won{
+    height: 40rem;
     grid-row: 1 / span 1;
   }
   .xper-head{
     padding-bottom: 4rem
   }
-  #scrollContainer.xper-cardgrid{
+  #experienceScroll.xper-cardgrid{
+    scroll-snap-type: x mandatory;
     width: 100%;
     height: 45rem;
     gap: 1rem;
@@ -164,8 +171,8 @@
     scroll-behavior: smooth;
     overflow-x: auto;
   }
-  #scrollContainer.xper-cardgrid::-webkit-scrollbar{ display: none; }
-  .cta-card.xper{ width: 350px; scroll-snap-align: start; }
+  #experienceScroll.xper-cardgrid::-webkit-scrollbar{ display: none; }
+  .cta-card.xper{ width: 350px; scroll-snap-align: center; }
 }
 
 /* ---------------- Small phones <= 575px ---------------- */

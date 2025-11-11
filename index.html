@@ -6,17 +6,22 @@
     <title>DavidPeter's Dev Portfolio</title>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="media-queries.css">
-    <link rel="icon" href="images/IMG_6180_white.png">
+    <link rel="icon" href="images/IMG_6180_black.PNG">
 
       <!-- Particles.js library -->
-    <link rel="stylesheet" href="http://unpkg.com/aos@next/dist/aos.css" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="http://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="index.js" defer></script>
 </head>
 <body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <img class="loader-logo" src="images/IMG_6180_white.png" alt="">
+            <h1>David Peters</h1>
+        </div>
+    </div>
     
     <!---------------------- Particle background -->
         <div id="particles-js"></div>
@@ -41,10 +46,12 @@
                         <span class="bar"></span>
                         <span class="bar"></span>
                     </button>
-        </nav>
+            </nav>
 
         <!----------------- HERO SECTION -->
+
         <div id="main-body" class="main-body">
+            
             
             <!--------------------- HERO SECTION -------------------->
             <section id="heading-container" class="heading-container">
@@ -78,7 +85,7 @@
         </div>
 
     <!-- ------------------ ABOUT SECTION  -->
-    <section id="about-section" data-aos="fade-up">
+    <section id="about-section">
         <div class="about-hero-grid">
             <ul class="abt-img">
                 <img class="about-img" src="images/daeepee.jpg" alt="">
@@ -96,7 +103,7 @@
     </section>
 
     <!--------------------- FEATURE SECTION -->
-    <section id="feature-section" class="feature-section" data-aos="fade-up">
+    <section id="feature-section" class="feature-section">
         <ul>
             <span class="services">My Services</span><br>
             <span class="about-heading-text">What I do</span>
@@ -121,12 +128,12 @@
     </section>
 
     <!-------------------- EXPERIENCE SECTION -->
-     <section id="xperience-section" class="xperience-section" data-aos="fade-up">
+     <section id="xperience-section" class="xperience-section">
         <ul class="xper-head">
             <span class="about-heading-text">My Work Experience</span><br>
             <span class="services xper">(Product Design)</span>
         </ul>
-        <ul class="xper-cardgrid" id="scrollContainer">
+        <ul class="xper-cardgrid" id="experienceScroll">
             <ul class="cta-card xper won">
                 <span class="card-header">NAV Hackathon Project</span>
                 <li><p class="card-textx">Joined a 5 man team of designers and developers called the "Hacksmith" for the competition. </p></li>
@@ -136,46 +143,44 @@
                 <span class="card-header">HomeLife Brands</span>
                 <li><p class="card-textx">Worked on the sister company called: The Pet Entrepreneurs (TPE).</p></li>
                 <li><p class="card-textx snd">Iterated TPE's logo, handled the Ux design of the landing page of the website, created Ad designs for TPE's podcast event.</p></li>
-                <ul class="card-flex">
+                <div class="card-flex">
                     <img class="card-icn" src="images/USA_flag.PNG" alt="">
                     <span><a class="card-ls" href="https://www.homelifemedia.com">Live Site <ion-icon class="view-icon ex" name="arrow-forward-outline"></ion-icon></a></span>
-                </ul>
+                </div>
             </ul>
             <ul class="cta-card xper">
                 <span class="card-header">The Eztech Group</span>
                 <li><p class="card-textx">Designed branding Ads and website UX to solve design the company design needs.</p></li>
                 <li><p class="card-textx snd">Taught over 50 high-school kids graphics design and scratch programming language.</p></li>
-                <ul class="card-flex">
+                <div class="card-flex">
                     <img class="card-icn" src="images/nigeria_flag.PNG" alt="">
                     <span><a class="card-ls" href="https://www.theeztechgroup.com">Live Site <ion-icon class="view-icon ex" name="arrow-forward-outline"></ion-icon></a></span>
-                </ul>
+                </div>
             </ul>
             <ul class="cta-card xper">
                 <span class="card-header">Divnerix Innovations</span>
                 <li><p class="card-textx">Worked with a team of designers and developers in delivering numerous creative websites and mobile apps.</p></li>
                 <li><p class="card-textx snd">Personally iterated the companies website with Ux design.</p></li>
-                <ul class="card-flex">
+                <div class="card-flex">
                     <img class="card-icn" src="images/nigeria_flag.PNG" alt="">
                     <span><a class="card-ls" href="https://www.divnerix.com">Live Site <ion-icon class="view-icon ex" name="arrow-forward-outline"></ion-icon></a></span>
-                </ul>
+                </div>
             </ul>
             <ul class="cta-card xper">
                 <span class="card-header">Engageathon</span>
                 <li><p class="card-textx">Deliver designs that align with brand identity, collaborated with cross-functional teams for branding projects.</p></li>
                 <li><p class="card-textx snd">Collaborated with teams to iterate the companie's logo and the UX design projects of sister companies .</p></li>
-                <ul class="card-flex">
+                <div class="card-flex">
                     <img class="card-icn" src="images/USA_flag.PNG" alt="">
                     <span><a class="card-ls" href="https://www.engageathon.com">Live Site <ion-icon class="view-icon ex" name="arrow-forward-outline"></ion-icon></a></span>
-                </ul>
+                </div>
             </ul>
-            
-            
         </ul>
         <div class="pagination" id="pagination"></div>
      </section>
 
     <!--------------------- PROJECT SECTION -->
-     <section id="project-section" class="project-section" data-aos="fade-up">
+     <section id="project-section" class="project-section">
         <ul class="pject-main">
             <span class="services">My Works</span><br>
             <span class="about-heading-text">My projects</span><br>

@@ -1,3 +1,19 @@
+window.addEventListener('load', function() {
+    // 1. Get the preloader and main content elements
+    const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('main-body');
+    
+    // 2. Add a CSS class to start the fade-out animation
+    preloader.style.opacity = 0; // The CSS transition handles the smooth fade
+    
+    // 3. Set a timeout to remove the preloader completely after the animation finishes
+    setTimeout(function() {
+        preloader.style.display = 'none';
+        mainContent.style.display = 'block'; // Show the main content
+    }, 1000); // Wait 1000ms (1 second) to match a typical fade transition
+});
+
+
 // --- PARTICLES CODE
 particlesJS("particles-js", {
   particles: {
@@ -219,21 +235,45 @@ container.addEventListener('scroll', () => {
 
 
 // DOT UNDERNEAT FEATURE-CTA-CARD
-const container = document.getElementById('scrollContainer');
-const cards = container.querySelectorAll('.cta-card');
-const pagination = document.getElementById('pagination');
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('experienceScroll'); // the scrollable cards
+  const cards = container.querySelectorAll('.cta-card');
+  const pagination = document.getElementById('pagination');
 
-// Create dots
-cards.forEach((_, index) => {
-  const dot = document.createElement('div');
-  dot.classList.add('pagination-dot');
-  if (index === 0) dot.classList.add('active');
-  pagination.appendChild(dot);
+  // Clear previous dots (just in case)
+  pagination.innerHTML = '';
+
+  // Create pagination dots
+  cards.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('pagination-dot');
+    if (index === 0) dot.classList.add('active');
+    pagination.appendChild(dot);
+  });
+
+  const dots = pagination.querySelectorAll('.pagination-dot');
+
+  // Function to update active dot on scroll
+  const updateActiveDot = () => {
+    const scrollLeft = container.scrollLeft;
+    const cardWidth = cards[0].offsetWidth;
+    const index = Math.round(scrollLeft / cardWidth);
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  };
+
+  // Listen for scroll
+  container.addEventListener('scroll', updateActiveDot);
+
+  // Optional: clicking a dot scrolls to that card
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      container.scrollTo({
+        left: cards[i].offsetLeft,
+        behavior: 'smooth'
+      });
+    });
+  });
 });
-const dots = pagination.querySelectorAll('.pagination-dot');
-
-
-AOS.init({
-  duration: 1500,
-  once: false
-})
