@@ -32,7 +32,6 @@ body {
   background: radial-gradient(circle at 30% 30%, #03070f, #000000 95%);
   background-size: contain;
   animation: smoothDarkMove 25s ease-in-out infinite;
-  position: relative;
 }
 body::after{
     position: absolute;
@@ -54,7 +53,7 @@ body::after{
   height: 100%;
   background-repeat: repeat;
   background-size: 200px, 200px;
-  z-index: -1;
+  z-index: -2;
   animation: moveStars 60s linear infinite;
   transform: translateZ(0);
   mix-blend-mode: screen;
@@ -68,12 +67,6 @@ body::after{
         background-position: -10000px 5000px, -8000px 20000px, -5000px 1000px;
     }
 }
-.main-body{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
 /* ----- LIST STYLES ----- */
 li,
 a{
@@ -167,44 +160,223 @@ ion-icon{
 .navbar-toggle.open .bar:nth-child(3) { transform: translateY(-0.7rem) rotate(-45deg); }
 /* -------------------------------------------- */
 
+.main-body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
 
-/* ----------------------------------- FEATURE SECTION */
-.feature-section{
-    min-height: 90vh;
-    height: auto;
+.heading-section{
+    width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
-    width: 90%;
+    height: auto;    
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    gap: 9rem;
-    margin-top: 3rem;
+    justify-content: center;
+    padding: 15rem 0;
 }
-.services{
-    font-size: 3rem;
+.head-flex{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5rem;
+}
+.heading-sm{
+    color: #fff;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.about-heading-text{
+    font-size: 6.6rem;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* -------------------------------- PROJECT SECTION */
+.project-detail{ color: #fff; font-size: 2.4rem; }
+.pject-grid{
+    width: 95%;
+    margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); justify-self: center; gap: 2rem; background: transparent; backdrop-filter: blur(3px); box-shadow: 0px 0px 100px -65px #525252e7; padding: 5rem; }
+.pject-card{ background: #0b0c1a94; backdrop-filter: blur(2px); color: #fff; border-radius: 2rem; overflow: hidden; width: 35rem; transition: transform 0.3s linear; }
+.card-img img:hover{ transform: scale(1.2); height: 30rem; }
+.card-img{ width: 100%; height: 30rem; overflow: hidden; }
+.card-img img{ width: 100%; height: 100%; object-fit: cover; border-radius: 2rem; transition: 0.2s linear; }
+.card-text.pject{ text-align: left; }
+
+
+
+/* ----------------------------------- FOOTER SECTION --------- */
+.footer{
+    min-height: 90vh;
+    height: auto;
+    width: 85%;
+    margin: 0 auto;
+    border-top-right-radius: 12rem;
+    border-top-left-radius: 12rem;
+    background: #1f1f1fa5;
+    padding: 10rem 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 9rem;
+}
+.footer-section{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid #fff;
+    padding-top: 8rem;
+}
+
+.ready-ul{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ready-contact{
+    font-size: 4rem;
+    color: #fff;
+}
+.ready-highlight{
     background: linear-gradient(135deg, #0752ba, #7b7bfa, #4169E1 );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-/* --------------- CTA CARDS */
-.cta-card-main {
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 4rem;
+.ready-text{
+    font-size: 1.7rem;
+    color: #dfdfdf;
+    padding-bottom:3rem;
 }
-/* ------------------------------- CTA CARD */
-.cta-card{ height: 30rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-items: center; padding: 5rem 3rem; background: #0041c406; backdrop-filter: blur(2px); box-shadow: 0px 0px 40px -25px #747272e7; border-radius: 2rem; font-size: var(--normal-text); font-weight: var(--medium-weight); transition: 250ms ease-in-out; border: 2px solid #232323f4; }  
-.cta-card.one:hover,
-.cta-card:active { transform: scale(1.02, 1.02); cursor: pointer; }
-.cta-card.two:hover,
-.cta-card:active { transform: scale(1.02, 1.02); cursor: pointer; }
-.cta-card.three:hover,
-.cta-card:active { transform: scale(1.02, 1.02); cursor: pointer; }
-/* CARD ICONS */
-.card-icon{ transform: none; color: #0752ba; font-size: 5rem; }
-/* CARD TEXT */
-.card-header{ color: #fff; font-size: 2.8rem; }
-.card-text{ color: #d3d3d3; font-size: 1.5rem; text-align: center; }
+/* CONTACT ME BUTTON */
+.footer-cme{
+    font-size: 1.6rem;
+    color: #f9f9f9;
+    padding: 1.5rem 3rem;
+    border-radius: 0.3rem;
+    border: 0.5px solid #212529;
+    background: linear-gradient(to right, #141414, #141414);
+    position: relative;
+}
+@property --radient{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.footer-cme::after, .footer-cme::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-image: conic-gradient(from var(--radient), transparent 80%, #0e3565, #96e1ff);
+    border-radius: 0.3rem;
+    padding: 3px;
+    z-index: -1;
+    animation: 3s spin linear infinite;
+}
+.footer-cme::before{
+    filter:blur(1.5rem)
+    opacity(1.5)
+}
+@keyframes spin {
+    from{
+        --radient: 0deg;
+    }
+    to{
+        --radient: 360deg;
+    }
+}
+
+
+.contact-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.footer-contact-text{
+    color: #fff;
+    font-size: 1.8rem;
+    transition: 0.2s linear;
+}
+.footer-contact-text:hover{
+    color: #ffffff80;
+    cursor: pointer;
+}
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 3.3rem;
+}
+.footer-contact-small-text{
+    font-size: 1.4rem;
+    color:#FFFFFF80;
+}
+.footer-contact-small-text:hover{
+    transition: 0.2s linear;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+/* ICON */
+.contact-icon-flex{
+    display: flex;
+    gap: 2rem;
+}
+.contact-icon{
+    width: 5rem;
+    height: 5rem;
+    background: #141414;
+    border: 1px solid #5c5c5c23;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.icon{
+    width: 20px;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.contact-icon::after, .contact-icon::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-image: conic-gradient(from var(--angle), transparent 0%,  #2d2c2d, #0041c4);
+    border-radius: 5rem;
+    padding: 3px;
+    z-index: -1;
+    animation: turner 1.5s linear infinite;
+}
+@keyframes turner {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+.contact-icon::before{
+    filter: blur(0.5px)
+    opacity(21)
+}
+.contact-icon:active, .contact-icon:hover{
+    cursor: pointer;
+    background: #2e2e2ee7;
+}
+
+/* COPYRIGHTS */
+.copyrights-flex{ display: flex; flex-direction: column; gap: 1rem; }
+.copyrights{ font-size: 1.4rem; line-height: 1.5; color: #FFFFFF80; transition: 0.2s linear; }
+.copyrights:hover{ color: #ffffffa3; cursor: pointer;}

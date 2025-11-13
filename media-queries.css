@@ -153,10 +153,10 @@
     width: 95%;
   }
   .cta-card.xper{
-    height: 40rem;
+    height: 45rem;
   }
   .cta-card.xper.won{
-    height: 40rem;
+    height: 45rem;
     grid-row: 1 / span 1;
   }
   .xper-head{
@@ -181,6 +181,10 @@
   .heading-container { margin-top: 4.5rem; border-radius: 3rem; padding: 1.6rem; height: 80vh; }
   h1.heading { font-size: 4.5rem; }
   .about-info { font-size: 1.7rem; }
+  #about-section{
+    min-height: 110vh;
+    height: auto;
+  }
   .services { font-size: 2.6rem; }
   .card-header { font-size: 2.2rem; }
   .card-text { font-size: 1.7rem; text-align: center; }
