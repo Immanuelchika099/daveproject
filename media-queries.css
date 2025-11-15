@@ -135,10 +135,10 @@
         z-index: 9999999;
     }
     .pagination-dot{
-        width: 10px;    
-        height: 10px;
-        border-radius: 50%;
-        background: transparent;
+        width: 30px;    
+        height: 30px;
+        border-radius: 50rem;
+        background: #fff;
         border: 1px solid blanchedalmond;
         margin: 0 5px;
         transition: background-color 0.3s;

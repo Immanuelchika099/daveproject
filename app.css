@@ -430,7 +430,7 @@ h1.heading{
 .xper-head{ padding-bottom: 7rem; }
 .cta-card.xper{
     list-style: none;
-    height: 40rem;
+    height: 45rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -446,6 +446,7 @@ h1.heading{
 .card-textx{
     text-align: left;
     font-size: 1.6rem;
+    color: #d3d3d3;
 }
 .card-textx.snd{
     padding-bottom: 5rem;
