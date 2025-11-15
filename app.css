@@ -494,7 +494,6 @@ h1.heading{
 .footer{
     min-height: 90vh;
     height: auto;
-    position: sticky;
     max-width: 85%;
     width: auto;
     margin: 0 auto;
