@@ -240,9 +240,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = container.querySelectorAll('.cta-card');
   const pagination = document.getElementById('pagination');
 
+
+
+  // Select all your cards (change '.card' to your real class name)
+const touch = document.querySelectorAll('.cta-card');
+
+cards.forEach(card => {
+  // When user taps the card
+  touch.addEventListener('touchstart', () => {
+    touch.classList.add('hover-active');
+  });
+
+  // When the tap ends, remove hover after a tiny delay
+  touch.addEventListener('touchend', () => {
+    setTimeout(() => {
+      touch.classList.remove('hover-active');
+    }, 200);
+  });
+});
+
   // Clear previous dots (just in case)
   pagination.innerHTML = '';
-
   // Create pagination dots
   cards.forEach((_, index) => {
     const dot = document.createElement('div');
@@ -252,7 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const dots = pagination.querySelectorAll('.pagination-dot');
-
   // Function to update active dot on scroll
   const updateActiveDot = () => {
     const scrollLeft = container.scrollLeft;
@@ -263,10 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
       dot.classList.toggle('active', i === index);
     });
   };
-
   // Listen for scroll
   container.addEventListener('scroll', updateActiveDot);
-
   // Optional: clicking a dot scrolls to that card
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
