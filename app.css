@@ -411,12 +411,12 @@ h1.heading{
 .cta-card{ height: 30rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-items: center; padding: 5rem 3rem; background: #0041c406; backdrop-filter: blur(2px); box-shadow: 0px 0px 40px -25px #747272e7; border-radius: 2rem; font-size: var(--normal-text); font-weight: var(--medium-weight); transition: 250ms ease-in-out; border: 2px solid #232323f4; 
 }  
 .cta-card.one:hover,
-.cta-card.one.hovered {
+.cta-card.one.focus {
     transform: scale(1.02, 1.02); cursor: pointer; }
 .cta-card.two:hover,
-.cta-card:active { transform: scale(1.02, 1.02); cursor: pointer; }
+.cta-card:focus { transform: scale(1.02, 1.02); cursor: pointer; }
 .cta-card.three:hover,
-.cta-card:active { transform: scale(1.02, 1.02); cursor: pointer; }
+.cta-card:focus { transform: scale(1.02, 1.02); cursor: pointer; }
 /* CARD ICONS */
 .card-icon{ transform: none; color: #0752ba; font-size: 5rem; }
 /* CARD TEXT */

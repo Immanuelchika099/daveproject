@@ -239,64 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('experienceScroll'); // the scrollable cards
   const cards = container.querySelectorAll('.cta-card');
   const pagination = document.getElementById('pagination');
-
-
-  // Put this at the bottom of your body or in your JS bundle
-(function () {
-  const targets = document.querySelectorAll('.cta-card');
-
-  if (!('IntersectionObserver' in window)) {
-    // fallback: simply add hovered on load for older browsers
-    targets.forEach(t => t.classList.add('hovered'));
-    return;
-  }
-
-  // parameters: trigger when ~50% of the element is visible
-  const observerOptions = {
-    root: null,
-    threshold: [0, 0.25, 0.5, 0.75, 1.0]
-  };
-
-  // tiny debounce to avoid flicker when scrolling fast
-  let scheduled = null;
-  function schedule(fn) {
-    if (scheduled) cancelAnimationFrame(scheduled);
-    scheduled = requestAnimationFrame(() => { scheduled = null; fn(); });
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    schedule(() => {
-      entries.forEach(entry => {
-        const el = entry.target;
-        // choose a sensible policy: consider element hovered when at least 45% visible
-        const isVisibleEnough = entry.intersectionRatio >= 0.45;
-
-        if (isVisibleEnough) {
-          // add the class that mirrors your hover styles
-          el.classList.add('hovered');
-        } else {
-          // remove when it's no longer sufficiently in view
-          el.classList.remove('hovered');
-        }
-      });
-    });
-  }, observerOptions);
-
-  targets.forEach(t => observer.observe(t));
-
-  // BONUS: if you also want a small tap-to-toggle behavior:
-  // (uncomment the next block if you want tap to toggle manually)
-  /*
-  targets.forEach(t => {
-    t.addEventListener('click', (e) => {
-      // prevent default link behavior: if you want clicks to still navigate, remove this line
-      e.preventDefault();
-      t.classList.toggle('hovered');
-    });
-  });
-  */
-})();
-
+  
   
   // Clear previous dots (just in case)
   pagination.innerHTML = '';
