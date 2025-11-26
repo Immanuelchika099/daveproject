@@ -153,7 +153,8 @@ li{
 .nav-links-text{
     font-size: 1.4rem;
     letter-spacing: 1px;
-    transition: 0.2s ease-in;
+    transition: .4s ease-in-out;
+    transition-delay: .2s;
 }
 .nav-links-text:focus, .nav-links-text:hover{
     color: #0041c4;
